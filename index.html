@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account</title>
+	<link type="text/css" href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="content">
+		<header class="header_wrapper">
+			<h1>OnlineAccount</h1>
+		</header>
+		<nav>
+			<ul id="ul_nav">
+				<li class="active" id="liAccount" onclick="runProgramme.switchTab('Account')" ><a>Account</a></li>
+		  		<li id="liDeposit" onclick="runProgramme.switchTab('Deposit')"><a>Deposit</a></li>
+	  			<li id="liWithdrawal" onclick="runProgramme.switchTab('Withdrawal')"><a>Withdrawal</a></li>
+			</ul>
+		</nav>
+		<section class="" id="Account">
+			<h2>Total money: <span id="currentMoney"></span></h2>
+			<div>
+				<h3>List of deposit</h3>
+				<table id="listDeposit">
+					<tr>
+						<th>Action</th>
+						<th>Time</th>
+						<th>Amount</th>
+					</tr>
+
+				</table>
+			</div>
+			
+			<div>
+				<h3>List of Withdrawal</h3>
+				<table id="listWithdrawal">
+					<tr>
+						<th>Action</th>
+						<th>Time</th>
+						<th>Amount</th>
+					</tr>
+
+				</table>
+			</div>
+		</section>
+		<section class="tabHidden" id="Deposit">
+			<h3>Deposit money</h3>
+			<div>
+				<input type="number" name="moneyDepot" id="moneyDepot" value="0">
+			</div>
+			
+			<button onclick="runProgramme.depositeMoney()">Deposit money</button>
+		</section>
+		<section class="tabHidden" id="Withdrawal">
+			<h3>Withdrawal money</h3>
+			<div>
+				<input type="number" name="withdrawalMoney" id="moneyWithdrawal" value="0">
+				<div id="errWithdrawal"></div>
+			</div>
+			<button onclick="runProgramme.withdrawalMoney()">Withdrawal money</button>
+		</section>
+		<footer></footer>
+		<script type="text/javascript" src="script.js"></script>
+	</div>
+</body>
+</html>
